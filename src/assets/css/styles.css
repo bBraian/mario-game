@@ -11,29 +11,45 @@
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    border-bottom: 10px solid green;
+    background: linear-gradient(#87CEEB, #E0F6FF);
 }
 
 .pipe {
     position: absolute;
     bottom: 0;
     width: 80px;
-    right: 0;
-    animation: pipe-animation 3s infinite linear;
+    animation: pipe-animation 1.5s infinite linear;
 }
 
 .mario {
     width: 150px;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
 }
 
 .jump {
     animation: mario-jump 500ms ease-out;
 }
 
+.clouds {
+    width: 500px;
+    position: absolute;
+    animation: clouds 3s linear infinite;
+}
+
 @keyframes pipe-animation {
     from {
         right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes clouds {
+    from {
+        right: -500px;
     }
     to {
         right: 100%;
@@ -64,7 +80,7 @@ button {
 
 @media (max-width: 900px) {
     .game-board {
-        width: 100%;
+        width: 90%;
     }
 
     .pipe {
